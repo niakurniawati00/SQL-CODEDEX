@@ -1,19 +1,15 @@
 --1. To show all table--
-
 select * from --(name table)
 
 --2. To show a some/part of column
-
 SELECT column1, column 2, column3,
 FROM (name table)
 
 --3. To show unique from 1 column
-
 SELECT DISTANCT genre
 FROM (name table)  
 
 --4, Show WHERE for wanted filter information base on a condition
-
 SELECT *
 FROM shows
 WHERE (column) = "something to find" / example : id = 20
@@ -65,8 +61,6 @@ ORDER BY year DESC;
 SELECT DISTINCT cuisine
 FROM restaurants; 
 
--- The answer is all unique cuisines in restaurants
-
 
 --2.What are all the Chinese restaurants? Italian?
 SELECT *
@@ -81,4 +75,5 @@ WHERE neighborhood = 'Greenpoint';
 --4.Where are the cheap eats? The bougie ones?
 SELECT *
 FROM restaurants
+
 WHERE price = '$';
