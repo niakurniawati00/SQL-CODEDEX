@@ -1,0 +1,84 @@
+--1. To show all table--
+
+select * from --(name table)
+
+--2. To show a some/part of column
+
+SELECT column1, column 2, column3,
+FROM (name table)
+
+--3. To show unique from 1 column
+
+SELECT DISTANCT genre
+FROM (name table)  
+
+--4, Show WHERE for wanted filter information base on a condition
+
+SELECT *
+FROM shows
+WHERE (column) = "something to find" / example : id = 20
+
+SELECT *
+FROM shows
+WHERE year > 2020; --Up 2020
+
+
+= equal to
+!= not equal to
+> greater than
+< less than
+>= greater than or equal to
+<= less than or equal to
+
+-- 5. LIKE, To show The LIKE operator can be used to search for a pattern in a column. It’s used in the WHERE clause: 
+-- or when you want to find something front alphabet in something column
+
+SELECT * 
+FROM shows
+WHERE name LIKE 'T%' ;
+
+-- 6. Between, to show The BETWEEN operator is used in a WHERE clause to filter the result set within a certain range. The range must be separated by an AND keyword.For example, this query filters the result to only include shows between the years 2020 and 2025 (inclusive):
+-- Or to show all table 2 different range but in same cell
+SELECT * 
+FROM shows
+WHERE year
+BETWEEN 2000 and 2025;  
+
+-- 7 ORDER BY, to show The ORDER BY statement sorts rows of data in ascending or descending order. By default, this command sorts the data in ascending order.
+-- mengurutkan baris data dalam urutan naik atau turun. Secara default, perintah ini mengurutkan data dalam urutan naik
+-- Write code below 💖
+SELECT name, genre, stream, year
+FROM shows
+ORDER BY year;
+
+-- Tahun terbaru / Order from the most recent year
+SELECT name, genre, stream, year
+FROM shows
+ORDER BY year DESC;
+
+
+
+--QUESTION CODEDEX--
+
+--1. What are all the unique cuisines in the table?
+
+SELECT DISTINCT cuisine
+FROM restaurants; 
+
+-- The answer is all unique cuisines in restaurants
+
+
+--2.What are all the Chinese restaurants? Italian?
+SELECT *
+FROM restaurants
+WHERE cuisine IN ('Chinese', 'Italian');
+
+--3. What are all the spots in Greenpoint (a neighborhood in Brooklyn)?
+SELECT *
+FROM restaurants
+WHERE neighborhood = 'Greenpoint';
+
+--4.Where are the cheap eats? The bougie ones?
+SELECT *
+FROM restaurants
+WHERE price = '$';
